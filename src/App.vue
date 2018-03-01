@@ -1,7 +1,10 @@
 <template>
- <transition :name="transitionName">
-   <router-view class="child-view"></router-view>
- </transition>
+  <div>
+    <transition>
+      <router-view class="child-view">
+      </router-view>
+    </transition>
+  </div>
 </template>
 
 <script>
@@ -12,7 +15,7 @@ export default {
       transitionName: 'slide-left'
     }
   },
-  created () {
+  mounted () {
     this.$router.beforeEach((to, from, next) => {
       this.transitionName = transition(from.name, to.name)
       next()
