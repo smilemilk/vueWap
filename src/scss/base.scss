@@ -1,0 +1,24 @@
+@charset 'utf-8';
+@import './default.scss';
+
+body {
+  font-size: 1rem;
+  overflow-x: hidden;
+  font-size: 0.28rem;
+}
+
+.child-view {
+  position: absolute;
+  width:100%;
+  // height: 100%;
+  transition: all .5s ease;
+  overflow-x: hidden;
+}
+.slide-left-enter, .slide-right-leave-active {
+  transition: all .5s ease;
+  transform: translate(100%, 0);
+}
+.slide-left-leave-active, .slide-right-enter {
+  transition: all .5s ease;
+  transform: translate(-100%, 0);
+}
