@@ -5,11 +5,18 @@
 </template>
 
 <script>
+import transition from './transition'
 export default {
   date () {
     return {
       transitionName: 'slide-left'
     }
+  },
+  created () {
+    this.$router.beforeEach((to, from, next) => {
+      this.transitionName = transition(from.name, to.name)
+      next()
+    })
   }
 }
 </script>
