@@ -4,6 +4,8 @@ import router from './router'
 
 import './utils/resize.js'
 
+import './scss/base.scss'
+
 Vue.config.productionTip = false
 
 new Vue({

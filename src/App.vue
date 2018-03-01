@@ -15,5 +15,10 @@ export default {
 </script>
 
 <style lang="scss">
-@import './scss/base.scss';
+@import './scss/color.scss';
+.page {
+  a {
+    color: $text-color-pink;
+  }
+}
 </style>

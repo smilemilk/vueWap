@@ -1,6 +1,8 @@
 <template>
   <div class="page">
-    详情
+    <router-link to="/">
+      go to main
+    </router-link>
   </div>
 </template>
 
