@@ -19,12 +19,26 @@ module.exports = {
   plugins: [
     'vue'
   ],
-  // add your custom rules here
+  globals: {
+    'vue': true,
+    'EventVue': true,
+    'wx': true
+  },
   rules: {
-    // allow async-await
-    'generator-star-spacing': 'off',
-    // allow debugger during development,
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'one-var': [0, 'always']
+    'one-var': [0, 'always'],
+    'arrow-parens': 0,
+    'generator-star-spacing': 0,
+    'one-var': 0,
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'no-multiple-empty-lines': [0, { max: 2 }],
+    'no-new': 'off',
+    'no-unneeded-ternary': 0,
+    'no-dupe-keys': 0,
+    'no-unused-expressions': [0, 'always'],
+    'no-useless-escape': 'off',
+    'no-undef':  [0, 'always'],
+    'new-cap': [0, { newIsCap: true, capIsNew: false }],
+    'space-before-function-paren': [0, 'always'],
+    semi: [0, 'always']
   }
 }

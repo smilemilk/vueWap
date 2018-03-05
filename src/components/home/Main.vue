@@ -3,7 +3,6 @@
     <Home v-if="tabIndex === 1"></Home>
     <MyBill v-if="tabIndex === 2"></MyBill>
     <Mine v-if="tabIndex === 3"></Mine>
-    <Footer @changeTab="changeTab"></Footer>
     <Footer></Footer>
   </div>
 </template>
@@ -27,12 +26,6 @@ export default {
     }
   },
   methods: {
-    changeTab (index) {
-      console.log('====================')
-      console.log(index)
-      // console.log(typeof(index))
-      this.tabIndex = index
-    }
   }
 }
 </script>
