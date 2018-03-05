@@ -1,5 +1,5 @@
 <template>
-  <div class="form-info" v-if="isShowed">
+  <div class="form-info" v-if="isShow">
     <slot></slot>
   </div>
 </template>
@@ -7,7 +7,7 @@
 <script>
 export default {
   props: {
-    isShowed: Boolean
+    isShow: Boolean
   },
   data() {
     return {
@@ -15,8 +15,8 @@ export default {
     }
   },
   watch: {
-    isShowed() {
-      if (this.isShowed) {
+    isShow() {
+      if (this.isShow) {
         setTimeout(() => {
           this.$emit('on-toast-back')
         }, this.time)

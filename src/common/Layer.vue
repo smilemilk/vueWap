@@ -58,7 +58,7 @@ export default {
       if (!shade) {
         // 点击非蒙版
         this.layerOptions.isShow = false;
-        this.$emit('onlayerback', msg)
+        this.$emit('on-layer-back', msg)
       }
     }
   }

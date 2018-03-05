@@ -25,7 +25,7 @@
 <script>
 export default {
   props: {
-    isloading: {
+    isLoading: {
       type: Boolean
     }
   },

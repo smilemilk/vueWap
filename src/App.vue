@@ -3,9 +3,9 @@
     <transition :name="transitionName">
       <router-view></router-view>
     </transition>
-    <Toast :isShowed="toast.isShow" @on-toast-back="closetoast">{{toast.message}}</Toast>
-    <Layer :layer-options="layer" @onlayback="closeLayer"></Layer>
-    <Loading :isloading="isloading"></Loading>
+    <Toast :is-show="toast.isShow" @on-toast-back="closeToast">{{toast.message}}</Toast>
+    <Layer :layer-options="layer" @on-lay-back="closeLayer"></Layer>
+    <Loading :is-loading="isloading"></Loading>
   </div>
 </template>
 
@@ -63,7 +63,7 @@ export default {
         this.isloading = loading
       })
     },
-    closetoast() {
+    closeToast() {
       this.toast.isShow = false;
     },
     showtoast(msg) {
