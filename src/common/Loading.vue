@@ -1,5 +1,5 @@
 <template>
-  <div class="loading-box" v-if="isloading">
+  <div class="loading-box" v-if="isLoading">
     <div class="loading">
       <div class="inner">
         <div class="line line1"></div>

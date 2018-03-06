@@ -5,7 +5,7 @@
     </transition>
     <Toast :is-show="toast.isShow" @on-toast-back="closeToast">{{toast.message}}</Toast>
     <Layer :layer-options="layer" @on-lay-back="closeLayer"></Layer>
-    <Loading :is-loading="isloading"></Loading>
+    <Loading :is-loading="isLoading"></Loading>
   </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
         isShow: false,
         message: ''
       },
-      isloading: false,
+      isLoading: false,
       transitionName: 'slide-left'
     }
   },
@@ -60,7 +60,7 @@ export default {
       EventVue.$on('confirmShow', this.confirmShow)
 
       EventVue.$on('loading', (loading) => {
-        this.isloading = loading
+        this.isLoading = loading
       })
     },
     closeToast() {

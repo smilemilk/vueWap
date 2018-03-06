@@ -1,6 +1,11 @@
 <template>
   <div class="container">
-    mine
+    业务
+    <div>
+      <router-link to="Mine">
+        go to mine
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -14,8 +19,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '../../scss/color.scss';
-  .container {
-    flex: 1;
-  }
+@import '../../scss/color.scss';
+.container {
+  flex: 1;
+}
 </style>

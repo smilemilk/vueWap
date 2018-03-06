@@ -1,27 +1,37 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Main from '@/components/home/Main'
-import Other from '@/components/home/Other'
-import Auth from '@/components/myBill/Auth'
+import Home from '@/views/home/Home'
+import Business from '@/views/business/Business'
+import Mine from '@/views/mine/Mine'
 
 Vue.use(Router)
+
+const layout = {
+  template: '<router-view></router-view>'
+}
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Main',
-      component: Main
+      component: layout,
+      children: [
+        {
+          path: '/',
+          name: 'Home',
+          component: Home
+        }
+      ]
     },
     {
-      path: '/other',
-      name: 'Other',
-      component: Other
+      path: '/business',
+      name: 'Business',
+      component: Business
     },
     {
-      path: '/auth',
-      name: 'Auth',
-      component: Auth
+      path: '/mine',
+      name: 'Mine',
+      component: Mine
     }
   ]
 })
